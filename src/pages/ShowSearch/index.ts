@@ -1,3 +1,3 @@
-import { ShowSearch } from './ShowSearch'
+import { ShowSearch } from './ShowSearch';
 
-export default ShowSearch
+export default ShowSearch;
