@@ -20,6 +20,9 @@ module.exports = {
     'react',
   ],
   rules: {
+    'react/function-component-definition': [2, {"namedComponents": "arrow-function"}],
     '@typescript-eslint/explicit-function-return-type': 0,
+    'import/prefer-default-export': 0,
+    'react/react-in-jsx-scope': 0
   },
 };
