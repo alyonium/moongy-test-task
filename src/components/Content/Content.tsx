@@ -2,7 +2,7 @@ import { Grid, Typography } from '@mui/material';
 import NoImage from 'icons/no-image.png';
 import { ReactNode } from 'react';
 import {
-  Cover, CoverWrapper, RatingBar, RatingWrapper, Information, ContentWrapper,
+  Cover, CoverWrapper, RatingBar, RatingWrapper, Information, ContentWrapper, TitleWrapper,
 } from './styles';
 
 type ContentProps = {
@@ -28,9 +28,9 @@ export const Content = ({
       </Grid>
 
       <Grid item>
-        <Typography variant="h3" component="h1" align="center">
+        <TitleWrapper variant="h3" component="h1">
           {title}
-        </Typography>
+        </TitleWrapper>
       </Grid>
 
       <Grid item>

@@ -1,5 +1,5 @@
 import { styled } from '@mui/material/styles';
-import { Grid, Rating } from '@mui/material';
+import { Grid, Rating, Typography } from '@mui/material';
 
 export const RatingBar = styled(Rating)`
   color: #fcc733;
@@ -15,6 +15,12 @@ export const Information = styled(Grid)`
     align-items: center;
   }
 `;
+
+export const TitleWrapper = styled(Typography)`
+  ${(props) => props.theme.breakpoints.down('md')} {
+    text-align: center;
+  }
+` as typeof Typography;
 
 export const RatingWrapper = styled(Grid)`
   justify-content: start;
