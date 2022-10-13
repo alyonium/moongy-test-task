@@ -5,3 +5,7 @@ export const ContentWrapper = styled(Grid)`
   justify-content: center;
   align-items: start;
 `;
+
+export const AccordionBlock = styled('div')`
+  margin-bottom: 20px;
+`;

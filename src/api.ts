@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import type { Episode, Show } from './types';
+import type { Episode, Show, ShowFromApi } from './types';
 
 export const tvmazeApi = createApi({
   reducerPath: 'tvmazeApi',
@@ -16,6 +16,17 @@ export const tvmazeApi = createApi({
         const params = new URLSearchParams({ embed: 'episodes' });
         return `shows/${id}?${params}`;
       },
+      transformResponse: (response: ShowFromApi) => ({
+        ...response,
+        seasons: response._embedded.episodes.reduce<Record<number, Episode[]>>((acc, el) => {
+          if (acc[el.season]) {
+            acc[el.season].push(el);
+          } else {
+            acc[el.season] = [el];
+          }
+          return acc;
+        }, {}),
+      }),
     }),
   }),
 });

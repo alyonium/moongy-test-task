@@ -18,8 +18,33 @@ export const HeaderWrapper = styled(Link)`
   background: #fff;
   z-index: 1000;
   margin-bottom: 10px;
+
+  :after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px; 
+    background-color: #bf1f41;
+    transition: width 0.5s; 
+  }
+
+  :hover:after {
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px; 
+    background-color: #f95a1c;
+    transition: width 0.5s; 
+  }
+  
   :hover {
-    color: #ff5d20;
+    color: #f95a1c;
   }
 `;
 

@@ -32,10 +32,18 @@ export const CoverWrapper = styled(Grid)`
 export const Cover = styled('img')`
   height: 400px;
   max-height: 400px;
-  max-width: 100%;
   object-fit: cover;
   overflow: hidden;
+  ${(props) => props.theme.breakpoints.down('md')} {
+    width: 100%;
+  }
   ${(props) => props.theme.breakpoints.down('sm')} {
+    height: 300px;
     max-height: 300px;
   }
+`;
+
+export const ContentWrapper = styled(Grid)`
+  flex-direction: column;
+  align-items: center;
 `;

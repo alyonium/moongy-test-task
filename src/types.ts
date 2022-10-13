@@ -19,10 +19,11 @@ export type Episode = {
   }
 };
 
-export type Show = {
+export type ShowFromApi = {
   id: string;
   name: string;
   summary: string;
+  genres: string[];
   image: {
     medium: string;
     original: string;
@@ -33,4 +34,8 @@ export type Show = {
   _embedded: {
     episodes: Episode[];
   }
+};
+
+export type Show = ShowFromApi & {
+  seasons: Record<number, Episode[]>;
 };

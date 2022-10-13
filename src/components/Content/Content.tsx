@@ -1,6 +1,6 @@
 import { Grid, Typography } from '@mui/material';
 import {
-  Cover, CoverWrapper, RatingBar, RatingWrapper, Information,
+  Cover, CoverWrapper, RatingBar, RatingWrapper, Information, ContentWrapper,
 } from './styles';
 
 type ContentProps = {
@@ -14,16 +14,14 @@ type ContentProps = {
 export const Content = ({
   image, rating, summary, title, subTitle,
 }: ContentProps) => (
-  <Grid container spacing={2}>
-    <CoverWrapper item xs={12} md={5}>
+  <ContentWrapper container spacing={2}>
+    <CoverWrapper item>
       <Cover src={image} />
     </CoverWrapper>
 
     <Information
       container
       item
-      md={7}
-      xs={12}
       spacing={1}
     >
       <Grid item>
@@ -46,8 +44,8 @@ export const Content = ({
       </RatingWrapper>
 
       <Grid item>
-        <Typography mb={5}>{summary}</Typography>
+        <Typography mb={2}>{summary}</Typography>
       </Grid>
     </Information>
-  </Grid>
+  </ContentWrapper>
 );

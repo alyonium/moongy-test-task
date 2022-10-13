@@ -20,7 +20,7 @@ export const Episode = () => {
     return null;
   }
   return (
-    <Container maxWidth="xl">
+    <Container maxWidth="lg">
       <ContentWrapper
         container
         spacing={2}
