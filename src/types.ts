@@ -3,13 +3,13 @@ export type Episode = {
   image: {
     medium: string;
     original: string;
-  };
+  } | null;
   rating: {
-    average: number;
+    average: number | null;
   };
   season: number;
   number: number;
-  summary: string;
+  summary: string | null;
   name: string;
   _embedded: {
     show: {
@@ -22,14 +22,14 @@ export type Episode = {
 export type ShowFromApi = {
   id: string;
   name: string;
-  summary: string;
+  summary: string | null;
   genres: string[];
   image: {
     medium: string;
     original: string;
-  };
+  } | null;
   rating: {
-    average: number;
+    average: number | null;
   };
   _embedded: {
     episodes: Episode[];

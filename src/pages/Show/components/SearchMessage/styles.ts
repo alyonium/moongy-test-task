@@ -4,8 +4,7 @@ import { Typography } from '@mui/material';
 export const TextWrapper = styled(Typography)`
   display: flex;
   align-items: center;
-  color: red;
-  gap: 2px;
+  gap: 10px;
   
   img {
     height: 30px;

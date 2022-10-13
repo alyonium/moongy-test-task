@@ -1,10 +1,8 @@
-import { Typography } from '@mui/material';
-import { ErrorWrapper } from './styles';
+import Fire from 'icons/fire.png';
+import { TextWrapper } from './styles';
 
 export const ErrorMessage = () => (
-  <ErrorWrapper>
-    <Typography variant="h6">
-      Error ;(
-    </Typography>
-  </ErrorWrapper>
+  <TextWrapper variant="h6">
+    error <img src={Fire} alt="fire" />
+  </TextWrapper>
 );

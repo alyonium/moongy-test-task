@@ -1,1 +1,6 @@
-export const removeHtmlTags = (summary: string) => summary.replace(/<p>|<\/p>|<b>|<\/b>|<i>|<\/i>/g, '');
+export const removeHtmlTags = (summary: string | null) => {
+  if (!summary) {
+    return '';
+  }
+  return summary.replace(/<p>|<\/p>|<b>|<\/b>|<i>|<\/i>|&amp;/g, '');
+};

@@ -5,12 +5,11 @@ import {
 import CssBaseline from '@mui/material/CssBaseline';
 import { Provider } from 'react-redux';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { store } from './store';
-import { Header } from './components/Header';
+import { Header } from 'components/Header';
+import { store } from 'store';
 
 const EpisodePage = lazy(async () => import('./pages/Episode'));
 const ShowPage = lazy(async () => import('./pages/Show'));
-const ShowSearchPage = lazy(async () => import('./pages/ShowSearch'));
 
 const theme = createTheme({
   palette: {
@@ -31,8 +30,7 @@ const App = () => (
         <Suspense fallback={<> </>}>
           <Header />
           <Routes>
-            <Route path="/" element={<ShowSearchPage />} />
-            <Route path="/show/:id" element={<ShowPage />} />
+            <Route path="/" element={<ShowPage />} />
             <Route path="/episode/:id" element={<EpisodePage />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
