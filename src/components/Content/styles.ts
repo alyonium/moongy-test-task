@@ -37,10 +37,8 @@ export const Cover = styled('img')`
   max-height: 400px;
   object-fit: cover;
   overflow: hidden;
-  
-  ${(props) => props.theme.breakpoints.down('md')} {
-    width: 100%;
-  }
+  max-width: 100%;
+
   
   ${(props) => props.theme.breakpoints.down('sm')} {
     height: 300px;
