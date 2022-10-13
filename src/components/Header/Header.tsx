@@ -6,11 +6,7 @@ import {
 } from './styles';
 import { loadOptions } from './loadOptions';
 import { customStyles } from './selectStyles';
-
-type Option = {
-  value: string;
-  label: string;
-};
+import { Option } from './types';
 
 export const Header = () => {
   const navigate = useNavigate();

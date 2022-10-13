@@ -1,9 +1,10 @@
 import { StylesConfig } from 'react-select';
+import { Option } from './types';
 
 // I use another selectpicker, not from Material UI,
 // so their styles can be changed only by this way
 
-export const customStyles: StylesConfig = {
+export const customStyles: StylesConfig<Option> = {
   control: (provided, state) => ({
     ...provided,
     borderWidth: '2px',
