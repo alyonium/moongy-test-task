@@ -18,7 +18,11 @@ import {
   AccordionBox, ContentWrapper, ListImage, AvatarBox,
 } from './styles';
 
-export const ShowContent = ({ id }: { id: string }) => {
+type ShowContentProps = {
+  id: string
+};
+
+export const ShowContent = ({ id }: ShowContentProps) => {
   const { data, isError, isLoading } = useGetShowByIdQuery(id);
 
   if (isLoading) {

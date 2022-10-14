@@ -1,9 +1,11 @@
+type Image = {
+  medium: string;
+  original: string;
+};
+
 export type Episode = {
   id: number;
-  image: {
-    medium: string;
-    original: string;
-  } | null;
+  image: Image | null;
   rating: {
     average: number | null;
   };
@@ -24,10 +26,7 @@ export type ShowFromApi = {
   name: string;
   summary: string | null;
   genres: string[];
-  image: {
-    medium: string;
-    original: string;
-  } | null;
+  image: Image | null;
   rating: {
     average: number | null;
   };
